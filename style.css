@@ -612,17 +612,10 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
         flex-direction: column;
         gap: 1.5rem;
         padding: 1rem;
-    }
-    
-    .left-panel, .right-panel {
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
         display: flex;
-        flex-direction: column;
     }
     
-    /* Réorganisation de l'ordre sur mobile */
+    /* Réorganisation de l'ordre des cartes individuelles */
     .config-card {
         order: 1;
     }
@@ -641,6 +634,13 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
     
     .data-card {
         order: 5;
+    }
+    
+    .left-panel, .right-panel {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        display: contents; /* Les enfants deviennent des enfants directs du container */
     }
     
     .card {
