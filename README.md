@@ -7,13 +7,6 @@
 
 ---
 
-## Aperçu
-
-*(Ajoutez une capture d’écran de votre application ici si possible)*  
-![Aperçu de TimeForge](screenshot.png)
-
----
-
 ## Fonctionnalités
 
 - ✅ Ajout de tâches avec durée et niveau d'urgence  
