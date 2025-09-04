@@ -61,11 +61,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function loadData() {
+    try {
+        const dataStr = localStorage.getItem('timeforge-data');
+        if (dataStr) {
+            const data = JSON.parse(dataStr);
+            tasks = Array.isArray(data.tasks) ? data.tasks : [];
+            planning = Array.isArray(data.planning) ? data.planning : [];
+        }
+    } catch (e) {
+        tasks = [];
+        planning = [];
+    }
 }
 
 function saveData() {
     const data = { tasks, planning };
-    console.log('Données sauvegardées (stockage en mémoire pour cette démo)', data);
+    try {
+        localStorage.setItem('timeforge-data', JSON.stringify(data));
+    } catch (e) {
+        // fallback: rien
+    }
 }
 
 function handleTaskSubmit(e) {
