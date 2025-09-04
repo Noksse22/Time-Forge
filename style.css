@@ -426,7 +426,7 @@ body.focus-mode .container {
     font-size: 0.95rem;
 }
 .btn-danger {
-    background: var(--error-color);
+    background: #e74c3c;
     color: #fff;
 }
 .btn-danger:hover, .btn-danger:focus {
@@ -619,30 +619,15 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
         min-width: 0;
         max-width: 100%;
         width: 100%;
-        display: contents; /* Les enfants deviennent des enfants directs du container */
+        display: contents;
         padding: 0;
         margin: 0;
     }
-    .config-card {
-        order: 1;
-        width: 100%;
-    }
-    .planning-card {
-        order: 2;
-        width: 100%;
-    }
-    .add-task-card {
-        order: 3;
-        width: 100%;
-    }
-    .tasks-card {
-        order: 4;
-        width: 100%;
-    }
-    .data-card {
-        order: 5;
-        width: 100%;
-    }
+    .config-card { order: 1; width: 100%; }
+    .planning-card { order: 2; width: 100%; }
+    .add-task-card { order: 3; width: 100%; }
+    .tasks-card { order: 4; width: 100%; }
+    .data-card { order: 5; width: 100%; }
     .card {
         margin-bottom: 16px;
         padding: 1.2rem;
@@ -650,8 +635,14 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
         width: 100%;
         border-radius: 10px;
     }
-    .tasks-list, .timeline {
+    .timeline {
+        max-height: none !important;
+        overflow-y: visible !important;
+        margin-bottom: 1.5rem;
+    }
+    .tasks-list {
         max-height: 220px;
+        overflow-y: auto;
     }
 }
 
@@ -660,18 +651,21 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
         padding: 0.5rem;
         gap: 1rem;
     }
-    
     .card {
         padding: 0.8rem;
         border-radius: 10px;
     }
-    
     .btn {
         padding: 0.7rem 1rem;
     }
-    
-    .tasks-list, .timeline {
-        max-height: 220px;
+    .timeline {
+        max-height: none !important;
+        overflow-y: visible !important;
+        margin-bottom: 1.2rem;
+    }
+    .tasks-list {
+        max-height: 160px;
+        overflow-y: auto;
     }
 }
 
@@ -679,27 +673,28 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
     .header {
         padding: 1.2rem 0;
     }
-    
     .header h1 {
         font-size: 1.2rem;
     }
-    
     .container {
         padding: 0.2rem;
     }
-    
     .card {
         padding: 0.6rem;
         border-radius: 8px;
     }
-    
     .btn {
         padding: 0.6rem 0.8rem;
         font-size: 0.95rem;
     }
-    
-    .tasks-list, .timeline {
-        max-height: 160px;
+    .timeline {
+        max-height: none !important;
+        overflow-y: visible !important;
+        margin-bottom: 1rem;
+    }
+    .tasks-list {
+        max-height: 120px;
+        overflow-y: auto;
     }
 }
 
