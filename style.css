@@ -607,50 +607,51 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 968px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
-        gap: 1.5rem;
-        padding: 1rem;
+        gap: 1rem;
+        padding: 0.5rem;
         display: flex;
     }
-    
-    /* Réorganisation de l'ordre des cartes individuelles */
-    .config-card {
-        order: 1;
-    }
-    
-    .planning-card {
-        order: 2;
-    }
-    
-    .add-task-card {
-        order: 3;
-    }
-    
-    .tasks-card {
-        order: 4;
-    }
-    
-    .data-card {
-        order: 5;
-    }
-    
-    .left-panel, .right-panel {
+    .left-panel,
+    .right-panel {
         min-width: 0;
         max-width: 100%;
         width: 100%;
         display: contents; /* Les enfants deviennent des enfants directs du container */
+        padding: 0;
+        margin: 0;
     }
-    
+    .config-card {
+        order: 1;
+        width: 100%;
+    }
+    .planning-card {
+        order: 2;
+        width: 100%;
+    }
+    .add-task-card {
+        order: 3;
+        width: 100%;
+    }
+    .tasks-card {
+        order: 4;
+        width: 100%;
+    }
+    .data-card {
+        order: 5;
+        width: 100%;
+    }
     .card {
+        margin-bottom: 16px;
         padding: 1.2rem;
         min-width: 0;
         width: 100%;
+        border-radius: 10px;
     }
-    
     .tasks-list, .timeline {
-        max-height: 300px;
+        max-height: 220px;
     }
 }
 
