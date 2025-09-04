@@ -426,7 +426,7 @@ body.focus-mode .container {
     font-size: 0.95rem;
 }
 .btn-danger {
-    background: #e74c3c;
+    background: var(--error-color);
     color: #fff;
 }
 .btn-danger:hover, .btn-danger:focus {
@@ -651,8 +651,7 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
         border-radius: 10px;
     }
     .tasks-list, .timeline {
-        max-height: none;
-        overflow-y: visible;
+        max-height: 220px;
     }
 }
 
@@ -672,8 +671,7 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
     }
     
     .tasks-list, .timeline {
-        max-height: none;
-        overflow-y: visible;
+        max-height: 220px;
     }
 }
 
@@ -701,8 +699,7 @@ input:focus, select:focus, button:focus, .btn:focus, .tasks-list:focus, #timelin
     }
     
     .tasks-list, .timeline {
-        max-height: none;
-        overflow-y: visible;
+        max-height: 160px;
     }
 }
 
